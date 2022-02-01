@@ -25,9 +25,9 @@ Debris = game:GetService("Debris")
 RunService = game:GetService("RunService")
 
 DamageValues = {
-	BaseDamage = 5,
-	SlashDamage = 10,
-	LungeDamage = 30
+	BaseDamage = 1,
+	SlashDamage = 5,
+	LungeDamage = 10,
 }
 
 --For R15 avatars
@@ -135,7 +135,7 @@ function Lunge()
 	Damage = DamageValues.LungeDamage
 
 	Sounds.Lunge:Play()
-	
+
 	if Humanoid then
 		if Humanoid.RigType == Enum.HumanoidRigType.R6 then
 			local Anim = Instance.new("StringValue")
@@ -159,7 +159,7 @@ function Lunge()
 		Force.Parent = Torso
 	end
 	]]
-	
+
 	wait(0.2)
 	Tool.Grip = Grips.Out
 	wait(0.6)
@@ -190,7 +190,7 @@ function Activated()
 		AnimationId = BaseUrl .. Animations.R15Slash,
 		Parent = Tool
 	})
-	
+
 	local LungeAnim = (Tool:FindFirstChild("R15Lunge") or Create("Animation"){
 		Name = "R15Lunge",
 		AnimationId = BaseUrl .. Animations.R15Lunge,

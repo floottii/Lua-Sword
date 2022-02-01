@@ -1,4 +1,4 @@
---This is a regular script, do not use LocalScript.. Make sure the model is ready.
+--This is a regular script, do not use LocalScript.. Make sure the model is ready, and is in starter pack.
 
 
 Tool = script.Parent
